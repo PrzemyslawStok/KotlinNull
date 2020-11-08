@@ -39,6 +39,10 @@ fun equation(x: Double):Double{
     return sin(x)
 }
 
-fun squareEquation(a:Double,b:Double,c:Double,x:Double):Double{
-    return 0.0
+fun squareEquation(a:Double,b:Double,c:Double,x:Double):Double?{
+    val delta  = b*b-4*a*c
+    if(delta>=0){
+        return 0.0
+    }else
+        return null
 }
