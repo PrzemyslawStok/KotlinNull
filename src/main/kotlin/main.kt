@@ -1,3 +1,4 @@
+import java.lang.Math.random
 import java.lang.NullPointerException
 import kotlin.math.sin
 import kotlin.math.sqrt
@@ -29,6 +30,24 @@ fun main() {
     println(equation(equationValue(x)?:-1.0))
 
     val x1 = squareEquation(1.0,2.0,1.0,5.0)
+
+    val (a,b) = twoValuesEquation()
+    println("a = $a, b = $b")
+
+    for(i in 1..100) {
+        name = generateName("${(random()*10).toInt()}")
+
+        name?.let {
+            println("Imię: ${name}")
+        }
+    }
+}
+
+fun generateName(str: String):String?{
+    if(System.currentTimeMillis()%2!=0L)
+        return "Przemysław_$str"
+    else
+        return null
 }
 
 fun equationValue(x: Double):Double?{
@@ -51,4 +70,8 @@ fun squareEquation(a:Double,b:Double,c:Double,x:Double):Double?{
         return -b*sqrt(delta)/2/a
     }else
         return null
+}
+
+fun twoValuesEquation():Pair<Double,Double>{
+    return Pair(1.0,5.0)
 }
