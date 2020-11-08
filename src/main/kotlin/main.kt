@@ -27,6 +27,8 @@ fun main() {
     println("Wartość równania wynosi: ${y}")
 
     println(equation(equationValue(x)?:-1.0))
+
+    val (x1,x2) = squareEquation(1.0,2.0,1.0,5.0)
 }
 
 fun equationValue(x: Double):Double?{
@@ -40,13 +42,13 @@ fun equation(x: Double):Double{
     return sin(x)
 }
 
-fun squareEquation(a:Double,b:Double,c:Double,x:Double):Double?{
+fun squareEquation(a:Double,b:Double,c:Double,x:Double):Pair<Double?,Double?>{
     val delta  = b*b-4*a*c
     if(delta>=0){
         if(a==0.0)
-            return null
+            return Pair(null,null)
 
-        return -b*sqrt(delta)/2/a
+        return Pair(-b*sqrt(delta)/2/a,b*sqrt(delta)/2/a)
     }else
-        return null
+        return Pair(null,null)
 }
