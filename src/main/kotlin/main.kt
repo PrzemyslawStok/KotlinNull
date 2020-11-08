@@ -38,7 +38,9 @@ fun main() {
         name = generateName("${(random()*10).toInt()}")
 
         name?.let {
-            println("Imię: ${name}")
+            println("Imię: ${it}")
+        }.also{
+            //println("Imię: ${it}")
         }
     }
 }
