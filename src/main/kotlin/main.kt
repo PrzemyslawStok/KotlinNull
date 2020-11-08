@@ -1,5 +1,6 @@
 import java.lang.NullPointerException
 import kotlin.math.sin
+import kotlin.math.sqrt
 
 fun main() {
     var name:String? = "Przemysław"
@@ -42,7 +43,10 @@ fun equation(x: Double):Double{
 fun squareEquation(a:Double,b:Double,c:Double,x:Double):Double?{
     val delta  = b*b-4*a*c
     if(delta>=0){
-        return 0.0
+        if(a==0.0)
+            return null
+
+        return -b*sqrt(delta)/2/a
     }else
         return null
 }
