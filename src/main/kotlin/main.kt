@@ -17,4 +17,6 @@ fun main() {
     }
 
     println("Długość napisu $surname: ${surname.length}")
+
+    var nameLength = name?.length?:-1
 }
