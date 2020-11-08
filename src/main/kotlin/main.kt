@@ -38,3 +38,7 @@ fun equationValue(x: Double):Double?{
 fun equation(x: Double):Double{
     return sin(x)
 }
+
+fun squareEquation(a:Double,b:Double,c:Double,x:Double):Double{
+    return 0.0
+}
